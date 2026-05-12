@@ -5,6 +5,8 @@
 
 ## Objective
 
+![Challenge Description](Metamon6.png)
+
 Can you unlock Ahmad's file? If so, what password was used?
 
 ## Solution

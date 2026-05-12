@@ -5,6 +5,8 @@
 
 ## Challenge Overview
 
+![Challenge Description](Zip-a-Dip-Doo-Dah.png)
+
 > *"Our enterprise ZIP extraction platform automatically analyzes uploaded archives and enforces strict security policies before extraction. Every file is carefully inspected to prevent malicious content from being deployed on our servers."*
 >
 > **Hint:** `abc != ABC`

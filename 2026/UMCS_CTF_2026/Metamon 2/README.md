@@ -5,6 +5,8 @@
 
 ## Objective
 
+![Challenge Description](Metamon2.jpeg)
+
 Identify the malicious URL Ahmad visited.
 
 ## Solution

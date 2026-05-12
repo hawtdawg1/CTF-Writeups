@@ -5,6 +5,8 @@
 
 ## Challenge Overview
 
+![Challenge Description](I-DOTheVeiledVow.png)
+
 > *"The OmniCorp CEO is getting married! Standard guests can view the public memo, but VIPs receive a secure, encrypted archive. Can you bypass the guest list, obtain the VIP secret, and uncover what lies hidden behind the veil?"*
 
 ## Initial Enumeration / Recon

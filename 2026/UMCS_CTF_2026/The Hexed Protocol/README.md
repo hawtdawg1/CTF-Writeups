@@ -5,6 +5,8 @@
 
 ## Challenge Overview
 
+![Challenge Description](TheHexedProtocol.png)
+
 > *"We've intercepted communications from a target corporation. Our operatives managed to grab an internal HR memo and a highly obfuscated data dump of their master infrastructure vault. Your mission: Reconstruct the vault, figure out how to break the encryption using the HR policy as your guide, and retrieve the flag hidden inside."*
 
 Two files were provided: `scraps.md` (an HR policy memo) and `vault_dump.txt` (a long hex string).

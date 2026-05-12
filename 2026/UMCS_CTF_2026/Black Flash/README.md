@@ -5,6 +5,8 @@
 
 ## Challenge Overview
 
+![Challenge Description](BlackFlash.png)
+
 > *"Mei Mei has been lured into the Smallpox Deity's Domain Expansion! She is currently sealed inside a heavy stone coffin, and the countdown to her burial has begun… Help Mei Mei perform a Black Flash to shatter the coffin."*
 
 Files: `black_flash` (binary), `libc.so.6`, `ld-linux-x86-64.so.2`.

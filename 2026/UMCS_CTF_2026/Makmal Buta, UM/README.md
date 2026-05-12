@@ -5,6 +5,8 @@
 
 ## Challenge Overview
 
+![Challenge Description](MakmalButaUM.png)
+
 > *"The following message was recovered:"* [scrambled ciphertext shown in challenge description]
 
 Two files were given: `loganathan_translated_to_py3.py` (a Python script) and `output.txt` (a log containing 637 sequential hexadecimal IDs).

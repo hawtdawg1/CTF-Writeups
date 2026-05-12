@@ -5,6 +5,8 @@
 
 ## Challenge Overview
 
+![Challenge Description](SpinningCat.png)
+
 > **Files:** `spinning_cat`, `libc.so.6`, `ld-linux-x86-64.so.2`
 > **Remote:** `nc chal.umcybersec.site 10276`
 

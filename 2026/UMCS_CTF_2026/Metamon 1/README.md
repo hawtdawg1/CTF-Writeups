@@ -12,6 +12,8 @@ ZIP password: `UMCSCTF2026#`
 
 ## Objective
 
+![Challenge Description](Metamon1.png)
+
 What is the threat actor trying to say from the dropped note?
 
 ## Solution

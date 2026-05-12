@@ -5,6 +5,8 @@
 
 ## Challenge Overview
 
+![Challenge Description](GhostInTheRadio.png)
+
 > *"During the UM Cybersecurity Summit, a strange signal was detected on the campus network. It contains a 'corrupted.bin' file. Initial analysis shows it's encrypted with a rolling XOR cipher. If you can't fix the 'drift' in the key, the image will remain a ghost."*
 >
 > **Hint:** *"XOR the first 4 bytes of your file with the standard PNG magic bytes. Do you notice the 'drift' in the resulting keys?"*

@@ -5,6 +5,8 @@
 
 ## Challenge Overview
 
+![Challenge Description](VarsityLakeSonata.png)
+
 > A single ELF64 binary named `varsity_lake_sonata` was provided.
 
 ## Initial Enumeration / Recon

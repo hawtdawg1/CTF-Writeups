@@ -5,6 +5,8 @@
 
 ## Challenge Overview
 
+![Challenge Description](Cyberblindbox.jpeg)
+
 > **Service:** `nc chal.umcybersec.site 10245`
 >
 > **Hints:**

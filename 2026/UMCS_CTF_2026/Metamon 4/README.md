@@ -5,6 +5,8 @@
 
 ## Objective
 
+![Challenge Description](Metamon4.png)
+
 What else did you find?
 
 ## Solution

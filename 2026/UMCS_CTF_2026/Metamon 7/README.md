@@ -5,6 +5,8 @@
 
 ## Objective
 
+![Challenge Description](Metamon7.png)
+
 Gather all dropped IOCs — provide file hashes in SHA256.
 
 ## Solution
