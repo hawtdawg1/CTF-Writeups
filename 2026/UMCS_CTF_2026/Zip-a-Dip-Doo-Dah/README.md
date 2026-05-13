@@ -1,6 +1,7 @@
 # Zip-a-Dip-Doo-Dah
 
 **Category:** Crypto / Web
+
 **Flag:** `UMCS{04346b1f-f7f4-433a-b5fb-208bbdda8575}`
 
 ## Challenge Overview
