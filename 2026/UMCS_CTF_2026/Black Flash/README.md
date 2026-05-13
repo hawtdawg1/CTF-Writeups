@@ -1,6 +1,7 @@
 # Black Flash
 
 **Category:** Binary Exploitation
+
 **Flag:** `UMCS{wh7_bl4ck_fl45h_15_120_p3rc3nt?}`
 
 ## Challenge Overview
