@@ -1,6 +1,7 @@
 # Varsity Lake Sonata
 
 **Category:** Reverse Engineering
+
 **Flag:** `UMCS{t4sik_v4rs1ty_pi4n0_x0r_m3l0dy}`
 
 ## Challenge Overview
