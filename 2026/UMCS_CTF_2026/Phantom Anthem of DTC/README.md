@@ -1,6 +1,7 @@
 # Phantom Anthem of DTC
 
 **Category:** Crypto
+
 **Flag:** `UMCS{ILMU_PUNCA_KEMAJUAN}`
 
 ## Challenge Overview
