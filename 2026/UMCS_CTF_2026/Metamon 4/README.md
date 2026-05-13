@@ -1,6 +1,7 @@
 # Metamon 4 — Steganography Payload
 
 **Category:** DFIR
+
 **Flag:** `UMCS{STay_1N_7hE_M1dDLe,l1kE_Y0U_A_LiTlLE,DONt_Want_NO_RidD1E}`
 
 ## Objective
