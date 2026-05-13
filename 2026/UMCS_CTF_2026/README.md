@@ -1,7 +1,12 @@
 # UMCS CTF 2026
-!(UMCS_FrontPage.png)
+CTF writeup for UMCS CTF 2026.
+![FrontPage](UMCS_FrontPage.png)
 
-CTF writeup for UMCS CTF 2026. I took part in this CTF competition and solved the following challenges.
+Managed to placed 30th out of 190 teams personally solving 18/33 challenges.
+![TeamScore](team_scoreboard.png)
+
+
+Solved the following challenges:
 
 | Category | Challenge |
 | :---: | :---: |
