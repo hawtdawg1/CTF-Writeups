@@ -1,6 +1,6 @@
 # UMCS CTF 2026
 ![FrontPage](UMCS_FrontPage.png)
-CTF writeup for UMCS CTF 2026.
+
 
 
 ![TeamScore](team_scoreboard.png)
