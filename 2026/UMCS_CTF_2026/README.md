@@ -4,7 +4,7 @@
 
 
 ![TeamScore](team_scoreboard.png)
-Managed to placed 30th out of 190 teams personally solving 18/33 challenges.
+Managed to placed 30th out of 190 teams personally solving 18/33 challenges within 24 hours.
 
 
 Solved the following challenges:
