@@ -1,4 +1,6 @@
 # UMCS CTF 2026
+!(UMCS_FrontPage.png)
+
 CTF writeup for UMCS CTF 2026. I took part in this CTF competition and solved the following challenges.
 
 | Category | Challenge |
