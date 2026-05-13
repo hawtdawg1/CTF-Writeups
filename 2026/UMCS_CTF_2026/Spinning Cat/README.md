@@ -1,6 +1,7 @@
 # Spinning Cat
 
 **Category:** Binary Exploitation
+
 **Flag:** `UMCS{0I1A_o11a_O11A_0i1A_OIIA_0114}`
 
 ## Challenge Overview
