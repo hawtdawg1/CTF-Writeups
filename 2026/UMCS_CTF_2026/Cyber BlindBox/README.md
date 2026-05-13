@@ -1,6 +1,7 @@
 # Cyber BlindBox
 
 **Category:** Binary Exploitation
+
 **Flag:** `UMCS{50af76ba-ac53-4909-bbf4-a1c0885e8d63}`
 
 ## Challenge Overview
