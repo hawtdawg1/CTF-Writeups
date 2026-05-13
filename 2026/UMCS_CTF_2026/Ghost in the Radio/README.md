@@ -1,6 +1,7 @@
 # Ghost in the Radio [Got first blood for this :)]
 
 **Category:** Crypto
+
 **Flag:** `UMCS{XOR_M4G1C_BYT3S}`
 
 ## Challenge Overview
