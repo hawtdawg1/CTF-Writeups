@@ -1,4 +1,4 @@
-# Ghost in the Radio [Got first blood for this :)]
+# Ghost in the Radio [Got first blood for this :) ]
 
 **Category:** Crypto
 
