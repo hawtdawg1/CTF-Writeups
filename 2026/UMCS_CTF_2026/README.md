@@ -1,9 +1,10 @@
 # UMCS CTF 2026
-CTF writeup for UMCS CTF 2026.
 ![FrontPage](UMCS_FrontPage.png)
+CTF writeup for UMCS CTF 2026.
 
-Managed to placed 30th out of 190 teams personally solving 18/33 challenges.
+
 ![TeamScore](team_scoreboard.png)
+Managed to placed 30th out of 190 teams personally solving 18/33 challenges.
 
 
 Solved the following challenges:
