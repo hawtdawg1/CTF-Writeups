@@ -3,7 +3,9 @@
 This repository shall comprise writeups concerning Capture The Flag (CTF) competitions that I have undertaken.
 
 ## CTF Events
-List of CTF events that i have joined before
+List of CTF events that i have joined in 2024
+
+List of CTF events that i have joined in 2026
 
 
 | Event Name | Writeup Available? | Writeup Link |
