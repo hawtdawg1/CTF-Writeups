@@ -1,6 +1,7 @@
 # The Hexed Protocol
 
 **Category:** Crypto
+
 **Flag:** `UMCS{m4sk_4tt4cks_b34t_brut3_f0rc3}`
 
 ## Challenge Overview
