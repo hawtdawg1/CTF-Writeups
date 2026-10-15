@@ -1,6 +1,6 @@
 # CTF Writeup
 
-This repository shall comprise writeups concerning Capture The Flag (CTF) competitions that I have undertaken.
+This repository contains my writeups from Capture the Flag (CTF) competitions I’ve participated in.
 
 ## CTF Events
 
