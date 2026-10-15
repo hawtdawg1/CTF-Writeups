@@ -6,16 +6,16 @@ Writeups for the following challenges:
 
 | Category | Challenge |
 | :---: | :---: |
-| Misc / Firmware / Web | [AetherGate](AetherGate) |
-| Web | [DefCamp Supply](DefCamp%20Supply) |
+| Cryptography | [power-with-errors](power-with-errors) |
 | Forensics | [Gnome Breaker](Gnome%20Breaker) |
 | Forensics | [Kameosa](Kameosa) |
 | Forensics | [Kanji (first analysis)](Kanji) |
 | Forensics | [Kanji (detailed analysis)](Kanji%20-%20Detailed) |
-| Unspecified | [Legacy Note-Taking Service](Legacy-Note-Taking-Service) |
-| Cryptography | [power-with-errors](power-with-errors) |
-| Misc / Web | [sea-of-theft - Q1: Flag of Clairvoyance](sea-of-theft-q1-flag-of-clairvoyance) |
 | Misc | [solstice-9](solstice-9) |
+| Misc / Firmware / Web | [AetherGate](AetherGate) |
+| Misc / Web | [sea-of-theft - Q1: Flag of Clairvoyance](sea-of-theft-q1-flag-of-clairvoyance) |
+| Unspecified | [Legacy Note-Taking Service](Legacy-Note-Taking-Service) |
+| Web | [DefCamp Supply](DefCamp%20Supply) |
 | Web | [coreweb](coreweb) |
 
 The two Kanji analyses disagree on Q1 and Q7. Those answers are marked as unverified in the writeups.
