@@ -1,0 +1,229 @@
+# power-with-errors
+
+**Category:** Cryptography  
+**Difficulty:** Hard  
+**Author:** KLPP  
+**Flag format:** `CTF{sha256}`  
+**Flag:** `CTF{7ff8b019311e3394808f55ebaa1e9c7cef048a6c8681074d0cda751a85dbe9df}`
+
+## Overview
+
+The prompt asks, "Have you heard about ciphertext-only attacks?" The challenge supplies its generator, five test cases, a parameter file, and a 100-byte encrypted blob named `enc`. There is no oracle or server; the ciphertexts alone must reveal the keys.
+
+The core observation is that all three clean matrices in each test case are powers of one matrix, so they commute. Expanding that relationship for the published noisy matrices gives a modular linear system with a small nonlinear remainder. A lattice recovers the byte errors, which are also the XOR keys used to encrypt the flag.
+
+## Reading the generator
+
+The relevant part of `chall.sage` is:
+
+```python
+p = getPrime(128)
+n = 10
+t = 5
+c = 3
+
+flag = open("flag.txt", "rb").read()
+flag += b"\x00" * (n*n - len(flag))
+
+for T in range(t):
+    A = random_matrix(GF(p), n, n)
+    out = []
+    for _ in range(c):
+        key = b"\x00" + os.urandom(n*n - 1)
+        flag = xor(key, flag)
+        U = pow(A, secrets.randbelow(p)).list()
+        U = [a+b for (a, b) in zip(U, key)]
+        out.append(U)
+```
+
+Each of the five test cases creates a random $10\times10$ matrix $A$ over $\mathbb F_p$ and publishes three noisy powers:
+
+$$
+U_i=A^{r_i}+E_i\pmod p,
+$$
+
+where each entry of $E_i$ is a byte in $[0,255]$. The published 128-bit prime is:
+
+```text
+p = 289681150111530694174556323703782825681
+```
+
+Every key begins with a zero byte. Sage flattens matrices row by row, so $(E_i)_{0,0}=0$. The same 100-byte values are XORed into the padded flag. Across five test cases and three samples each, recovering the 15 error matrices also recovers all 15 keys.
+
+## Finding the invariant
+
+The zero byte in each key preserves only the first byte of the flag. The ciphertext is only the *final* XOR result, so there are no intermediate ciphertexts for a many-time-pad attack. Recovering the exponents would instead lead toward a matrix discrete-log problem, and it is unnecessary: the byte errors themselves are the keys.
+
+Any two powers of the same matrix commute:
+
+$$
+A^rA^s=A^{r+s}=A^sA^r.
+$$
+
+For two published matrices, write $U=X+E$ and $V=Y+F$, where $X=A^r$, $Y=A^s$, and $E,F$ are unknown byte matrices. The clean matrices obey $[X,Y]=XY-YX=0$. Substituting $X=U-E$ and $Y=V-F$ gives:
+
+$$
+[U-E,V-F]=0
+$$
+
+and, after expansion:
+
+$$
+[U,F]+[E,V]=[U,V]+[E,F].
+$$
+
+The left side, $UF+EV-VE-FU$, is linear in the entries of $E$ and $F$. The only nonlinear term is $[E,F]=EF-FE$. Each of its entries is a difference of two sums of ten byte products, bounded in magnitude by roughly $10\cdot255^2$, tiny beside $p\approx2^{128}$.
+
+Thus the problem becomes a modular linear system with a very small error:
+
+$$
+Le=c+q\pmod p,
+$$
+
+where $e$ contains the entries of $E$ and $F$, $L$ maps $(E,F)$ to $[U,F]+[E,V]$, $c=[U,V]$ is known, and $q=[E,F]$ is small. Both top-left error entries are known to be zero, leaving $2(10^2-1)=198$ unknown bytes.
+
+## Building the linear system
+
+For each output position $(i,j)$, the coefficient of $E_{r,c}$ in $EV-VE$ is:
+
+$$
+\delta_{i,r}V_{c,j}-V_{i,r}\delta_{c,j}.
+$$
+
+The coefficient of $F_{r,c}$ in $UF-FU$ is:
+
+$$
+U_{i,r}\delta_{c,j}-\delta_{i,r}U_{c,j}.
+$$
+
+These formulas build a $100\times198$ matrix over $\mathbb F_p$. The commutator map has rank 90 for a generic $10\times10$ matrix because its centralizer has dimension ten. I kept 50 independent original equations; the huge modulus and byte-sized solution made that sufficient while reducing the lattice cost.
+
+```python
+def jacobian(a, b):
+    variables = [
+        (which, r, c)
+        for which in range(2)
+        for r in range(10)
+        for c in range(10)
+        if (r, c) != (0, 0)
+    ]
+
+    rows = []
+    for i in range(10):
+        for j in range(10):
+            row = []
+            for which, r, c in variables:
+                if which == 0:  # an entry of E
+                    value = (b[c][j] if i == r else 0) \
+                          - (b[i][r] if j == c else 0)
+                else:           # an entry of F
+                    value = (a[i][r] if j == c else 0) \
+                          - (a[c][j] if i == r else 0)
+                row.append(value % p)
+            rows.append(row)
+    return rows, variables
+```
+
+## Centering the bytes
+
+Lattices naturally find coordinates near zero, but the errors lie in $[0,255]$. Center them with $z=2e-255$. Every coordinate of $z$ is an odd integer in $[-255,255]$, and $e=(z+255)/2$.
+
+Substitution into $Le=c+q$ yields:
+
+$$
+Lz=2c-255L\mathbf 1+2q\pmod p.
+$$
+
+Define $t=2c-255L\mathbf 1$. The quantity $Lz-t$ is $2q$ modulo $p$, so the correct $z$ makes it extremely small.
+
+## The lattice
+
+With $m=50$ retained equations and $n=198$ centered bytes, I used the row lattice generated by:
+
+$$
+B=\begin{pmatrix}
+pI_m & 0 & 0\\
+L^T & WI_n & 0\\
+-t^T & 0 & M
+\end{pmatrix},
+$$
+
+with:
+
+```python
+W = 512
+M = 2**20
+```
+
+$W$ balances byte coordinates against the quadratic commutator error; $M$ identifies vectors containing the target row. The correct centered error vector gives a short lattice vector:
+
+$$
+(Lz-t+pk,\;Wz,\;M)=(2q,\;Wz,\;M)
+$$
+
+for some integer vector $k$. A random modular solution is huge relative to these coordinates because $p$ is 128 bits. The embedding has dimension $50+198+1=249$.
+
+I reduced it with `python-flint`:
+
+```python
+reduced = fmpz_mat(basis).lll(delta=0.80, eta=0.51)
+```
+
+A candidate row has a final coordinate of $\pm M$. After correcting its sign and dividing the middle block by $W$, every coordinate must be odd and within $[-255,255]$. Converting with $(z+255)/2$ must produce bytes. Finally, subtracting those bytes from the published matrices must make the clean matrices commute exactly modulo $p$ across all 100 entries.
+
+## Recovering the third key
+
+Once the first two error matrices are known, at least one exact power $X$ of $A$ is available. For the third published matrix $U_2=X_2+E_2$:
+
+$$
+[X,U_2-E_2]=0,
+\qquad\text{so}\qquad
+[X,E_2]=[X,U_2].
+$$
+
+This is fully linear: there is no quadratic $[E,F]$ term. Only 99 bytes are unknown because the first is zero. With 50 equations, the embedding dimension falls to $50+99+1=150$. I verified the recovered key by checking that the third clean matrix commuted with both earlier ones. Repeating the process for all five test cases recovered all 15 XOR keys.
+
+## Decrypting the flag
+
+Encryption repeatedly applies XOR:
+
+$$
+C=F\oplus K_0\oplus K_1\oplus\cdots\oplus K_{14}.
+$$
+
+XOR is its own inverse, and order does not matter. Applying the recovered keys to `enc` gives:
+
+```python
+plain = bytearray(Path("challenge/enc").read_bytes())
+for key in keys:
+    plain = bytearray(a ^ b for a, b in zip(plain, key))
+print(bytes(plain).rstrip(b"\0").decode())
+```
+
+```text
+CTF{7ff8b019311e3394808f55ebaa1e9c7cef048a6c8681074d0cda751a85dbe9df}
+```
+
+## Reproducing the solve
+
+In the original challenge workspace, `solve.py` expects the extracted challenge files in a `challenge` directory beside the script. With those files and the `python-flint` dependency, the solve was run as follows. The helper scripts and challenge data are not included in this writeup.
+
+```bash
+python -m pip install python-flint
+python solve.py
+```
+
+The five 249-dimensional reductions can take time. Each test case is independent; the original workspace also used `worker.py` to solve one case at a time and `decrypt.py` to combine the keys:
+
+```bash
+python worker.py 0
+python worker.py 1
+python worker.py 2
+python worker.py 3
+python worker.py 4
+python decrypt.py
+```
+
+## Takeaway
+
+The byte errors are generated with `os.urandom`; their randomness is not the weakness. Publishing several noisy powers of the same matrix leaks a commutativity relation. That relation turns the error bytes, and therefore the XOR keys, into a recoverable small solution of a modular system using only the published ciphertexts.
