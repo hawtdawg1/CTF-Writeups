@@ -16,5 +16,5 @@ This repository contains my writeups from Capture the Flag (CTF) competitions Iâ
 | BCS CTF 2026 | 112 | - |
 | SunshineCTF 2026 | 59 | - |
 | CSS CTF 2026: Return of Nexus | 54 | - |
-| CDCTF 2026 | 7 | - |
+| CDCTF 2026 | 7 | [Link](2026/CDCTF_2026) |
 | kBxAc CTF 2026 | 56 | - |
