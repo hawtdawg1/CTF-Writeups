@@ -4,7 +4,7 @@ This repository shall comprise writeups concerning Capture The Flag (CTF) compet
 
 ## CTF Events
 
-CTF events I participated in during 2026:
+2026
 
 | Event Name | Writeup Available? | Writeup Link |
 | :---: | :---: | :---: |
