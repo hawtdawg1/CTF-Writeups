@@ -4,7 +4,7 @@
 
 **Flag:** `cdctf{Y_m4ny_functi0s_wh3n_f3w_d0_trick}`
 
-**Verification:** Recovered or checked against supplied material; checker acceptance was not documented.
+**Verification:** Accepted as the challenge flag.
 
 ## Challenge Overview
 

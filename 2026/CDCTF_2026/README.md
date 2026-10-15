@@ -1,5 +1,7 @@
 # CDCTF 2026
 
+![CDCTF 2026 team scoreboard showing 7th place](team_scoreboard.png)
+
 Placed 7th in CDCTF 2026.
 
 Earned six 1st, four 2nd, and six 3rd blood awards across these challenges.

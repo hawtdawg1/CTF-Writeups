@@ -4,7 +4,7 @@
 
 **Flag:** `cdctf{SkippingOnMyWay_}`
 
-**Verification:** Derived from the supplied Skippy script; checker acceptance was not documented.
+**Verification:** Accepted as the challenge flag.
 
 ## Challenge Overview
 

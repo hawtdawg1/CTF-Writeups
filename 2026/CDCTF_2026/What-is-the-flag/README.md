@@ -4,7 +4,7 @@
 
 **Flag:** `cdctf{it is sure where it isn't, within reason, and it knows where it was}`
 
-**Verification:** Recovered or checked against supplied material; checker acceptance was not documented.
+**Verification:** Accepted as the challenge flag.
 
 ## Challenge Overview
 

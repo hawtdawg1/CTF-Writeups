@@ -4,7 +4,7 @@
 
 **Flag:** `cdctf{AllXOR_Nev3rLupus}`
 
-**Verification:** Derived from the supplied Static binary; checker acceptance was not documented.
+**Verification:** Accepted as the challenge flag.
 
 ## Challenge Overview
 

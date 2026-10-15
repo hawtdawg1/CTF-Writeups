@@ -4,7 +4,7 @@
 
 **Flag:** `cdctf{too_many_cooks_ring0_from_a_script}`
 
-**Verification:** Displayed by the challenge instance; separate checker acceptance was not documented.
+**Verification:** Accepted as the challenge flag.
 
 ## Challenge Overview
 

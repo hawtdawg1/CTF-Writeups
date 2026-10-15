@@ -4,7 +4,7 @@
 
 **Flag:** `cdctf{Lamar Hackson}`
 
-**Verification:** Derived from the supplied logs; checker acceptance was not documented.
+**Verification:** Accepted as the challenge flag.
 
 ## Challenge Overview
 

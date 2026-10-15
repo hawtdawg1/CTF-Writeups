@@ -4,7 +4,7 @@
 
 **Flag:** `cdctf{pr3t7y_g00d_piv4cy_fl4G}`
 
-**Verification:** Recovered or checked against supplied material; checker acceptance was not documented.
+**Verification:** Accepted as the challenge flag.
 
 ## Challenge Overview
 

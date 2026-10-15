@@ -4,7 +4,7 @@
 
 **Flag:** `cdctf{salt_to_taste_any_preimage_works}`
 
-**Verification:** Displayed by the challenge instance; separate checker acceptance was not documented.
+**Verification:** Accepted as the challenge flag.
 
 ## Challenge Overview
 

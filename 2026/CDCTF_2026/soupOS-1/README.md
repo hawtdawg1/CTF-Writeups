@@ -4,7 +4,7 @@
 
 **Flag:** `cdctf{mise_en_place_two_paths_one_check}`
 
-**Verification:** Displayed by the challenge instance; separate checker acceptance was not documented.
+**Verification:** Accepted as the challenge flag.
 
 ## Challenge Overview
 

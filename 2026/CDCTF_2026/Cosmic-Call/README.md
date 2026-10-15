@@ -4,7 +4,7 @@
 
 **Flag:** `cdctf{W3_@rE_n0T_AL0n3_OuT_h3r3?_c8d45da3}`
 
-**Verification:** Displayed by the challenge instance; separate checker acceptance was not documented.
+**Verification:** Accepted as the challenge flag.
 
 ## Challenge Overview
 

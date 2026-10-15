@@ -4,7 +4,7 @@
 
 **Flag:** `cdctf{bad_recipe_the_loader_reads_wide}`
 
-**Verification:** Displayed by the challenge instance; separate checker acceptance was not documented.
+**Verification:** Accepted as the challenge flag.
 
 ## Challenge Overview
 

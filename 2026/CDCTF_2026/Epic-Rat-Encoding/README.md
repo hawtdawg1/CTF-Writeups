@@ -4,7 +4,7 @@
 
 **Flag:** `cdctf{Tom_Bevill_Building_at_noon_next_week_Thursday}`
 
-**Verification:** Recovered or checked against supplied material; checker acceptance was not documented.
+**Verification:** Accepted as the challenge flag.
 
 ## Challenge Overview
 
