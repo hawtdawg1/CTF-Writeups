@@ -4,7 +4,9 @@
 
 **Flag:** `cdctf{W!sh_Up0n_A_Sh0ot1ng_Star_a18b8a1a}`
 
-**Verification:** Displayed by the challenge instance; separate checker acceptance was not documented.
+**Blood award:** 3rd blood
+
+**Verification:** Displayed by the challenge instance.
 
 ## Challenge Overview
 

@@ -4,7 +4,9 @@
 
 **Flag:** `cdctf{We're_@LL_Mad_h3rE!}`
 
-**Verification:** Recovered or checked against supplied material; checker acceptance was not documented.
+**Blood award:** 3rd blood
+
+**Verification:** Recovered or checked against supplied material.
 
 ## Challenge Overview
 

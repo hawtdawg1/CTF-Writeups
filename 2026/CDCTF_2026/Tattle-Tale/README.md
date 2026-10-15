@@ -4,7 +4,9 @@
 
 **Flag:** `cdctf{D0wnTh3Da1sEeCha1n!_ca47be69}`
 
-**Verification:** Displayed by the challenge instance; separate checker acceptance was not documented.
+**Blood award:** 1st blood
+
+**Verification:** Displayed by the challenge instance.
 
 ## Challenge Overview
 

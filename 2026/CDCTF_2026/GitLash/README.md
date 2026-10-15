@@ -4,7 +4,9 @@
 
 **Flag:** `cdctf{mY_3m41L_is_a_TOKEN_4af956e2}`
 
-**Verification:** Displayed by the challenge instance; separate checker acceptance was not documented.
+**Blood award:** 1st blood
+
+**Verification:** Displayed by the challenge instance.
 
 ## Challenge Overview
 

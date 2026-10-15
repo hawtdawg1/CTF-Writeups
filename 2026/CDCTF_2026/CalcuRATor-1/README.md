@@ -4,7 +4,9 @@
 
 **Flag:** `cdctf{wpad}`
 
-**Verification:** Derived from static analysis of the supplied binary; checker acceptance was not documented.
+**Blood award:** 3rd blood
+
+**Verification:** Derived from static analysis of the supplied binary.
 
 ## Challenge Overview
 

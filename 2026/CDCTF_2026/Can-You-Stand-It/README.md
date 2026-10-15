@@ -4,7 +4,9 @@
 
 **Flag:** `cdctf{Geneva2009}`
 
-**Verification:** Recovered from the referenced source; checker acceptance was not documented.
+**Blood award:** 3rd blood
+
+**Verification:** Recovered from the referenced source.
 
 ## Challenge Overview
 

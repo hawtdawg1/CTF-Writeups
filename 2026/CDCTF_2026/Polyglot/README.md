@@ -4,7 +4,9 @@
 
 **Flag:** `cdctf{SecretOfComputerLanguages}`
 
-**Verification:** Full answer supplied separately; the attached files confirm its prefix and length but do not uniquely determine its suffix. Checker acceptance was not documented.
+**Blood award:** 1st blood (flag fix)
+
+**Verification:** Full answer supplied separately; the attached files confirm its prefix and length but do not uniquely determine its suffix.
 
 ## Challenge Overview
 

@@ -4,7 +4,9 @@
 
 **Password:** `Alfredo Linguini01`
 
-**Verification:** Password matches the supplied MD5 digest. Checker acceptance was not documented.
+**Blood award:** 1st blood
+
+**Verification:** Password matches the supplied MD5 digest.
 
 ## Challenge Overview
 

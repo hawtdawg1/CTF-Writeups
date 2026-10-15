@@ -4,7 +4,9 @@
 
 **Flag:** `cdctf{epithalamium738-trousseau201-honeymoon069}`
 
-**Verification:** Recovered or checked against supplied material; checker acceptance was not documented.
+**Blood award:** 2nd blood
+
+**Verification:** Recovered or checked against supplied material.
 
 ## Challenge Overview
 

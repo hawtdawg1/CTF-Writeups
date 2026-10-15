@@ -4,7 +4,9 @@
 
 **Flag:** `cdctf{TooConfusedlyDiffusedAcrossMyGroup???}`
 
-**Verification:** Recovered or checked against supplied material; checker acceptance was not documented.
+**Blood award:** 1st blood
+
+**Verification:** Recovered or checked against supplied material.
 
 ## Challenge Overview
 
